@@ -15,6 +15,10 @@ import { StateComponent } from './country/state/state.component';
 import { CityComponent } from './country/state/city/city.component';
 import { ProductComponent } from './product/product.component';
 import { ReviewComponent } from './product/review/review.component';
+import { RoomsComponent } from './rooms/rooms.component';
+import { DesksComponent } from './rooms/desks/desks.component';
+import { PcComponent } from './rooms/pc/pc.component';
+import { ChairsComponent } from './rooms/chairs.component';
 
 
 @NgModule({
@@ -31,7 +35,11 @@ import { ReviewComponent } from './product/review/review.component';
     StateComponent,
     CityComponent,
     ProductComponent,
-    ReviewComponent
+    ReviewComponent,
+    RoomsComponent,
+    DesksComponent,
+    PcComponent,
+    ChairsComponent
   ],
   imports: [
     BrowserModule,
