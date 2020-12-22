@@ -1,0 +1,10 @@
+<div class="border border-primary">
+    Product Component
+    <app-review 
+    (_clickReview)="reviewDataFromChildCompo($event)"
+    (_clickRating)="ratingDataFromChildCompo($event)"
+    
+    ></app-review>
+    {{review}}:{{rating}}
+</div>
+
