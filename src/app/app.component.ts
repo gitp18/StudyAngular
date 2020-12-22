@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'StudyAngular';
+  eventBindVal = '';
+  propertyBindVal = '';
+  attrBindVal = 'Pay Here';
+
+
+  onClick(){
+    this.eventBindVal = 'Event Binding!';
+    this.propertyBindVal = 'Property Binding!';
+  }
 }
