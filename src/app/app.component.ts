@@ -6,14 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'StudyAngular';
-  eventBindVal = '';
-  propertyBindVal = '';
-  attrBindVal = 'Pay Here';
-
-
-  onClick(){
-    this.eventBindVal = 'Event Binding!';
-    this.propertyBindVal = 'Property Binding!';
-  }
+  courses = [
+    {"id": 1, "title": "Angular"},
+    {"id": 2, "title": "React"},
+    {"id": 3, "title": "Veu"},
+    {"id": 4, "title": "Next"}
+  ]
 }
