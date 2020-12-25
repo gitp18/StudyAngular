@@ -11,7 +11,14 @@ export class AppComponent {
   propertyBindVal = '';
   attrBindVal = 'Pay Here';
 
-
+  email = 'abc@gmail.com';
+  firstName = '';
+  onKeyUp(){
+    this.firstName = this.email+'-';
+    console.log(this.email, 'Enter has been clicked');
+  }
+  
+  
   onClick(){
     this.eventBindVal = 'Event Binding!';
     this.propertyBindVal = 'Property Binding!';

@@ -1,10 +1,19 @@
 <router-outlet>
 
-Interpollation: {{title}}
-<br/>
-Event Binding: <button (click)="onClick()">Click Here</button> : {{eventBindVal}}
-<br/>
-Property Binding: <input [value]="propertyBindVal" />
-<br/>
+Interpollation: {{title}}<br />
+
+Event Binding: <button (click)="onClick()">Click Here</button> : {{eventBindVal}}<br />
+
+Property Binding: <input [value]="propertyBindVal" /><br />
+
 Attribute Binding: <button [attr.arial-label]="attrBindVal">Pay Here</button>
+
+
+<br />
+<input [(ngModel)] = "email" (keyup.enter)="onKeyUp()" id="emailId" /><br />
+
+<input [(ngModel)] = "firstName" (keyup.enter)="onKeyUp()" id="fNameId" />
+
 </router-outlet>
+
+
