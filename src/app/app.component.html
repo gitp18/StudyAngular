@@ -1,68 +1,76 @@
 <router-outlet>
 
-                <h1 className="text-primary text-center">Directives</h1>
-                <div className="row">    
-                    <div className="col-md-4">
-                        <h3 className="text-light bg-dark text-center">*ngIf</h3>
-                    </div>
-                    <div className="col-md-4">
-                        <h3 className="text-light bg-dark text-center">*ngSwitchCase</h3>
-                    </div>
-                    <div className="col-md-4">
-                        <h3 className="text-light bg-dark text-center">*ngFor</h3>
-                    </div>
-                </div>
-                
-                <div className="row">    
-                    <div className="col-md-4">
-                        <div *ngIf="courses.length>0; then ifSegment else elseSegment"></div>
-                        <ng-template #ifSegment>
-                            <ul>
-                                <li *ngFor="let course of courses; index as i">
-                                    {{i}} - {{course.title}}
-                                </li>
-                            </ul>
-                        </ng-template>
-                        <ng-template #elseSegment>
-                            No records found
-                        </ng-template>
-                    </div>
-                    <div className="col-md-4">
-                        <ul class="nav nav-pills">
-                            <li class="active">
-                                <a href="javascript:void(0)">Map View</a>
-                            </li>
-                            <li><a href="javascript:void(0)">List View</a></li>
-                        </ul>
-                        <div [ngSwitch]="viewMode">
-                            <div *ngSwitchCase="map">Map View</div>
-                            <div *ngSwitchCase="list">List View</div>
-                            <div *ngSwitchDefault>No records found</div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <ul>
-                            <li *ngFor="let course of courses; index as i">
-                                {{i}} - {{course.title}}
-                            </li>
-                        </ul>
-                        <br />
-                        
-                        <table>
-                            <tr *ngFor="let course of courses; index as i; even as isEven">
-                                <td *ngIf="isEven">{{i}} - {{course.title}}</td>
-                            </tr>
-                        </table>
-                        
-                        <!-- 
+    <h1 class="text-primary text-center">Directives</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">*ngIf</h3>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">*ngSwitchCase</h3>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">*ngFor</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div *ngIf="courses.length>0; then ifSegment else elseSegment"></div>
+            <ng-template #ifSegment>
+                <ul>
+                    <li *ngFor="let course of courses; index as i">
+                        {{i}} - {{course.title}}
+                    </li>
+                </ul>
+            </ng-template>
+            <ng-template #elseSegment>
+                No records found
+            </ng-template>
+        </div>
+        <div class="col-md-4">
+            <ul class="nav nav-pills">
+                <li [class.active]="viewMode == 'map'">
+                    <a href="javascript:void(0)" (click)="viewMode='map'">Map View</a>
+                </li>
+                <li [class.active]="viewMode == 'list'">
+                    <a href="javascript:void(0)" (click)="viewMode='list'">List View</a>
+                </li>
+            </ul>
+            <div [ngSwitch]="viewMode">
+                <div *ngSwitchCase="'map'">Map View Data</div>
+                <div *ngSwitchCase="'list'">List View Data</div>
+                <div *ngSwitchDefault>No records found</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <ul>
+                <li *ngFor="let course of courses; index as i">
+                    {{i}} - {{course.title}}
+                </li>
+            </ul>
+            <br />
+
+            <table>
+                <tr *ngFor="let course of courses; index as i; even as isEven">
+                    <td *ngIf="isEven">{{i}} - {{course.title}}</td>
+                </tr>
+            </table>
+
+            <!-- 
                         <ul>
                             <li *ngFor="let course of courses; index as i; even as isEven">
                                 <span *ngIf="isEven">{{i}} - {{course.title}}</span>
                             </li>
                         </ul>
                         -->
-                    </div>
-                </div>
-                
-    
+        </div>
+    </div>
+
+    <h1 class="text-primary text-center">Custom Directives</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <app-custom-directive></app-custom-directive>
+        </div>
+    </div>
+
 </router-outlet>
