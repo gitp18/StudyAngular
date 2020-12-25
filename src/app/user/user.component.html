@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card redial-border-light redial-shadow mb-4">
+            <div class="card-body">
+                <h6 class="header-title pl-3 redial-relative d-none">Create User</h6>
+                <form class="userformsec" #signUpForm="ngForm" (ngSubmit)="onSubmit(signUpForm)">
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                            <div class="form-group">
+                                <label class="d-block" for="fname" class="control-label">Full Name</label>
+                                <input type="text" #fname="ngModel" required class="form-control" name="full_name" [(ngModel)]="full_name" autocomplete="off" placeholder="" />
+                            
+                            </div>
+
+                            <div class="form-group">
+                                <label class="d-block" for="fname" class="control-label">Login ID</label>
+                                <input type="text" #loginId="ngModel" required class="form-control" name="login_id" [(ngModel)]="login_id" autocomplete="off" placeholder="" />
+                                
+                            </div>
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="redial-divider my-4"></div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xs" type="submit">Submit</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
