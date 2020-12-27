@@ -12,7 +12,9 @@ export class InteractionService {
   constructor() { }
 
   sendMsg(msg: string, msgTtype: string){
-    this._udemyMsgService.next(msg);
+    //alert(msgTtype);
+    this._udemyMsgService.next(msg);//, msgTtype);
+    
   }
   
 }

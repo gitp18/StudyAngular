@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CounterChildComponent } from './counter-child/counter-child.component';
 
 @Component({
@@ -8,6 +8,8 @@ import { CounterChildComponent } from './counter-child/counter-child.component';
 })
 export class CounterParentComponent {
   @ViewChild(CounterChildComponent, {static: true}) counterComponent: CounterChildComponent;
+
+  
   constructor() { }
 
   increase() {
