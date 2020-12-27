@@ -1,47 +1,78 @@
 <router-outlet>
 
-  <h1 class="text-primary text-center">Component Communication</h1>
-  <div class="row">    
-      <div class="col-md-4">
-          <h3 class="text-light bg-dark text-center">Parent To Child</h3>
-          <app-employee></app-employee>
-      </div>
-      
-      <div class="col-md-4">
-          <h3 class="text-light bg-dark text-center">Parent To Multiple Child</h3>
-          <app-office></app-office>
-      </div>
+    <h1 class="text-primary text-center">Component Communication</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Parent To Child</h3>
+            <app-employee></app-employee>
+        </div>
 
-      <div class="col-md-4">
-          <h3 class="text-light bg-dark text-center">Parent To Grand Child</h3>
-      </div>
-  </div>
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Parent To Multiple Child</h3>
+            <app-office></app-office>
+        </div>
 
-  
-  <br />
-  <div class="row">    
-    <div class="col-md-4">
-        <h3 class="text-light bg-dark text-center">Child To Parent</h3>
-        <app-school></app-school>
-    </div>
-    
-    <div class="col-md-4">
-        <h3 class="text-light bg-dark text-center">Child To Multiple sections of Parent</h3>
-        <app-product></app-product>
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Parent To Grand Child</h3>
+        </div>
     </div>
 
-    <div class="col-md-4">
-        <h3 class="text-light bg-dark text-center">Child To Grand Parent</h3>
+
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Child To Parent</h3>
+            <app-school></app-school>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Child To Multiple sections of Parent</h3>
+            <app-product></app-product>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Child To Parent(ViewChild)</h3>
+            <app-view-child></app-view-child>
+        </div>
     </div>
-</div>
 
+    <br />
+    <h1 class="text-primary text-center">Using @ViewChild Decorator</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Access Child Component</h3>
+            <app-counter-parent></app-counter-parent>
+        </div>
 
-<div class="row">    
-    <div class="col-md-12">
-        <h3 class="text-light bg-dark text-center">Between Sibbling</h3>
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Access Directive</h3>
+            <app-color-parent></app-color-parent>
+        </div>
 
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Acess DOM Element</h3>
+            <app-theme></app-theme>
+        </div>
     </div>
-</div>
+
+
+    <h1 class="text-primary text-center">Among any 2 un-related Components</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Property Among Siblings</h3>
+            <app-sibling></app-sibling>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Multiple Properties & Methods Among Sibling</h3>
+
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Among Sibling's Child</h3>
+            <app-afixi></app-afixi>
+        </div>
+    </div>
 
 
 </router-outlet>

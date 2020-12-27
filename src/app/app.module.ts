@@ -19,6 +19,23 @@ import { RoomsComponent } from './rooms/rooms.component';
 import { DesksComponent } from './rooms/desks/desks.component';
 import { PcComponent } from './rooms/pc/pc.component';
 import { ChairsComponent } from './rooms/chairs.component';
+import { UdemyComponent } from './sibling/udemy/udemy.component';
+import { RameshComponent } from './sibling/ramesh/ramesh.component';
+import { SureshComponent } from './sibling/suresh/suresh.component';
+import { SiblingComponent } from './sibling/sibling.component';
+import { AfixiComponent } from './sibling/afixi/afixi.component';
+import { IpsitaComponent } from './sibling/afixi/ipsita/ipsita.component';
+import { SaswatiComponent } from './sibling/afixi/saswati/saswati.component';
+import { SaraComponent } from './sibling/afixi/saswati/sara/sara.component';
+import { ViewChildComponent } from './ChildToParent/view-child/view-child.component';
+import { DepartmentComponent } from './ChildToParent/view-child/department/department.component';
+import { DepartmentListComponent } from './ChildToParent/view-child/department-list/department-list.component';
+import { CounterParentComponent } from './ViewChild/counter-parent/counter-parent.component';
+import { ColorParentComponent } from './ViewChild/color-parent/color-parent.component';
+import { ThemeComponent } from './ViewChild/theme/theme.component';
+import { CounterChildComponent } from './ViewChild/counter-parent/counter-child/counter-child.component';
+
+import { ChangeColorDirective } from './Directives/change-color.directive';
 
 
 @NgModule({
@@ -39,7 +56,23 @@ import { ChairsComponent } from './rooms/chairs.component';
     RoomsComponent,
     DesksComponent,
     PcComponent,
-    ChairsComponent
+    ChairsComponent,
+    UdemyComponent,
+    RameshComponent,
+    SureshComponent,
+    SiblingComponent,
+    AfixiComponent,
+    IpsitaComponent,
+    SaswatiComponent,
+    SaraComponent,
+    ViewChildComponent,
+    DepartmentComponent,
+    DepartmentListComponent,
+    CounterParentComponent,
+    ColorParentComponent,
+    ThemeComponent,
+    CounterChildComponent,
+    ChangeColorDirective
   ],
   imports: [
     BrowserModule,
