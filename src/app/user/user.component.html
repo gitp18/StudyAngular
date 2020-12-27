@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card redial-border-light redial-shadow mb-4">
+            <div class="card-body">
+                <h6 class="header-title pl-3 redial-relative d-none">Create User</h6>
+                <form class="userformsec" #signUpForm="ngForm" (ngSubmit)="onSubmit(signUpForm)">
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                            <div class="form-group" [class.has-error]="fname.invalid && fname.touched" [class.has-success]="fname.valid">
+                                <label class="d-block" for="fname" class="control-label">Full Name</label>
+                                <input type="text" #fname="ngModel" required class="form-control" name="full_name" [(ngModel)]="full_name" autocomplete="off" placeholder="" />
+                                <span class="help-block" *ngIf="fname.invalid && fname.touched">Full name is required!</span>
+                                <span class="help-block" *ngIf="fname.valid && fname.touched">{{signUpForm.value.full_name | json}}</span>
+                            </div>
+                
+                            <div class="form-group" [class.has-error]="fname.invalid && fname.touched" [class.has-success]="fname.valid">
+                                <label class="d-block" for="fname" class="control-label">Login ID</label>
+                                <input type="text" #loginId="ngModel" required class="form-control" name="login_id" [(ngModel)]="login_id" autocomplete="off" placeholder="" />
+                                <span class="help-block" *ngIf="loginId.invalid && loginId.touched">Full name is required!</span>
+                            </div>
+                            <br>
+                            {{signUpForm.value | json}}<br>
+                            <table>
+                                <tr>
+                                    <th>Validation Properties</th>
+                                    <th> Touched </th>
+                                    <th> Untouched </th>
+                                    <th> Pristine </th>
+                                    <th> Dirty </th>
+                                    <th> Valid </th>
+                                    <th> Invalid </th>
+                                </tr>
+                                <tr>
+                                    <th>Default values</th>
+                                    <td>false</td>
+                                    <td>true</td>
+                                    <td>true</td>
+                                    <td>false</td>
+                                    <td>false</td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <th>Individual Element Level(FullName)</th>
+                                    <td>{{fname.touched}} </td>
+                                    <td> {{fname.untouched}} </td>
+                                    <td>{{fname.pristine}} </td>
+                                    <td> {{fname.dirty}} </td>
+                                    <td>{{fname.valid}}</td>
+                                    <td>{{fname.invalid}} </td>
+            
+                                </tr>
+                                <tr>
+                                    <th>Form Level</th>
+                                    <td>{{signUpForm.touched}} </td>
+                                    <td> {{signUpForm.untouched}} </td>
+                                    <td>{{signUpForm.pristine}} </td>
+                                    <td> {{signUpForm.dirty}} </td>
+                                    <td>{{signUpForm.valid}}</td>
+                                    <td>{{signUpForm.invalid}} </td>
+            
+                                </tr>
+                            </table>
+            
+            
+            
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="redial-divider my-4"></div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xs" type="submit" [disabled]="signUpForm.invalid">Submit</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+
+    </div>
+</div>

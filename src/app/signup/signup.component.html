@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card redial-border-light redial-shadow mb-4">
+            <div class="card-body">
+                <form class="userformsec" #signUpForm="ngForm" (ngSubmit)="onSubmit(signUpForm)">
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                            <div class="form-group" [class.has-error]="fname.invalid && fname.touched" [class.has-success]="fname.valid">
+                                <label class="d-block" for="full_name" class="control-label">Full Name</label>
+                                <input type="text" #fname="ngModel" required name="full_name" [(ngModel)]="full_name" class="form-control" autocomplete="off" placeholder="" />
+                                <span class="help-block" *ngIf="fname.invalid && fname.touched">Full name is required!</span>
+                                <span class="help-block" *ngIf="fname.valid && fname.touched">{{signUpForm.value.full_name | json}}</span>
+                            </div>
+                
+                            
+                        </div>
+
+                        <div class="col-md-6">
+                            
+                            <div class="form-group" [class.has-error]="gender.invalid && gender.touched">
+                                <label class="d-block" for="gender" class="control-label">Gender</label>
+                                <div>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="gender" [(ngModel)]="gender" value="male" required #genderC="ngModel">Male
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="gender" [(ngModel)]="gender" value="female" required #genderC="ngModel">Female
+                                    </label>
+                                </div>
+                            </div>
+                
+                            <!--<div class="form-group" [class.has-error]="email.invalid && email.touched" [class.has-success]="email.valid">
+                                <label class="d-block">End Date</label>
+                                <input type="text" class="form-control form-control-sm" name="endDate" placeholder="" [(ngModel)]="endDate" autocomplete="off" bsDatepicker [bsConfig]= "datePickerConfig" />
+                            </div>-->
+                        </div>
+
+                        <br>{{signUpForm.value | json}}<br>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="redial-divider my-4"></div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xs" type="submit" [disabled]="signUpForm.invalid">Submit</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
