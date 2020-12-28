@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 //import { Employee } from '../Models/user.model';
 
 
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent {
 
   /*employee: Employee = {
     name: null,
@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit {
   ]
   constructor() { }
 
-  ngOnInit() {
+  ngonSubmit(){
   }
 
 }
