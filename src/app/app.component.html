@@ -1,6 +1,8 @@
 <router-outlet>
 
-    <h1 class="text-primary text-center">Component Communication</h1>
+    <h1 class="text-primary text-center">Component Communication & Various Decorators</h1><br><br><br>
+    
+    <h1 class="text-primary text-center">Using @Input Decorator</h1>
     <div class="row">
         <div class="col-md-4">
             <h3 class="text-light bg-dark text-center">Parent To Child</h3>
@@ -15,10 +17,10 @@
         <div class="col-md-4">
             <h3 class="text-light bg-dark text-center">Parent To Grand Child</h3>
         </div>
-    </div>
+    </div> <br />
 
-
-    <br />
+   
+    <h1 class="text-primary text-center">Using @Output Decorator</h1>
     <div class="row">
         <div class="col-md-4">
             <h3 class="text-light bg-dark text-center">Child To Parent</h3>
@@ -34,9 +36,28 @@
             <h3 class="text-light bg-dark text-center">Child To Parent(ViewChild)</h3>
             <app-view-child></app-view-child>
         </div>
-    </div>
+    </div><br />
 
-    <br />
+
+    <h1 class="text-primary text-center">Among any 2 un-related Components Using Subject Observable</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Property Among Siblings</h3>
+            <app-sibling></app-sibling>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Multiple Properties & Methods Among Sibling</h3>
+
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">Among Sibling's Child</h3>
+            <app-afixi></app-afixi>
+        </div>
+    </div><br>
+
+    
     <h1 class="text-primary text-center">Using @ViewChild Decorator</h1>
     <div class="row">
         <div class="col-md-4">
@@ -53,26 +74,49 @@
             <h3 class="text-light bg-dark text-center">Acess DOM Element</h3>
             <app-theme></app-theme>
         </div>
-    </div>
+    </div><br>
 
 
-    <h1 class="text-primary text-center">Among any 2 un-related Components</h1>
+    <h1 class="text-primary text-center">Using @ViewChildren Decorator</h1>
     <div class="row">
-        <div class="col-md-4">
-            <h3 class="text-light bg-dark text-center">Property Among Siblings</h3>
-            <app-sibling></app-sibling>
+        <div class="col-md-6">
+            <h3 class="text-light bg-dark text-center">Through Component</h3>
+            <app-component-parent></app-component-parent>
         </div>
 
         <div class="col-md-4">
-            <h3 class="text-light bg-dark text-center">Multiple Properties & Methods Among Sibling</h3>
+            <h3 class="text-light bg-dark text-center">Through DOM Element</h3>
+            <app-dom-parent></app-dom-parent>
+        </div>
+    </div><br>
 
+
+    <h1 class="text-primary text-center">Using @ContentChild Decorator</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="text-light bg-dark text-center">A simple example</h3>
+            <app-contentchild-parent></app-contentchild-parent>
         </div>
 
         <div class="col-md-4">
-            <h3 class="text-light bg-dark text-center">Among Sibling's Child</h3>
-            <app-afixi></app-afixi>
+            <h3 class="text-light bg-dark text-center">Through DOM Element</h3>
+            <app-contentchildren-parent></app-contentchildren-parent>
         </div>
-    </div>
+    </div><br>
+
+
+    <h1 class="text-primary text-center">Content Projection</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="text-light bg-dark text-center">A Simple Example</h3>
+            <content-parent></content-parent>
+        </div>
+
+        <div class="col-md-6">
+            <h3 class="text-light bg-dark text-center">Using Class, Id, Attribute, Tag Selectors</h3>
+            <app-allselector-parent></app-allselector-parent>
+        </div>
+    </div><br>
 
 
 </router-outlet>

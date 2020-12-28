@@ -34,8 +34,21 @@ import { CounterParentComponent } from './ViewChild/counter-parent/counter-paren
 import { ColorParentComponent } from './ViewChild/color-parent/color-parent.component';
 import { ThemeComponent } from './ViewChild/theme/theme.component';
 import { CounterChildComponent } from './ViewChild/counter-parent/counter-child/counter-child.component';
+import { ContentParentComponent } from './ContentProjection/parent/parent.component';
+import { ContentChildComponent } from './ContentProjection/child/child.component';
 
 import { ChangeColorDirective } from './Directives/change-color.directive';
+import { AllselectorChildComponent } from './ContentProjection/allselector-child/allselector-child.component';
+import { AllselectorParentComponent } from './ContentProjection/allselector-parent/allselector-parent.component';
+import { ContentchildParentComponent } from './ContentChild/contentchild-parent/contentchild-parent.component';
+import { ContentchildChildComponent } from './ContentChild/contentchild-parent/contentchild-child/contentchild-child.component';
+import { ContentchildrenChildComponent } from './ContentChildren/contentchildren-parent/contentchildren-child/contentchildren-child.component';
+import { ContentchildrenParentComponent } from './ContentChildren/contentchildren-parent/contentchildren-parent.component';
+import { ComponentParentComponent } from './ViewChildren/component-parent/component-parent.component';
+import { ComponentChildComponent } from './ViewChildren/component-parent/component-child/component-child.component';
+import { DomChildComponent } from './ViewChildren/dom-parent/dom-child/dom-child.component';
+import { DomParentComponent } from './ViewChildren/dom-parent/dom-parent.component';
+
 
 
 @NgModule({
@@ -72,7 +85,19 @@ import { ChangeColorDirective } from './Directives/change-color.directive';
     ColorParentComponent,
     ThemeComponent,
     CounterChildComponent,
-    ChangeColorDirective
+    ChangeColorDirective,
+    ContentParentComponent,
+    ContentChildComponent,
+    AllselectorChildComponent,
+    AllselectorParentComponent,
+    ContentchildParentComponent,
+    ContentchildChildComponent,
+    ContentchildrenChildComponent,
+    ContentchildrenParentComponent,
+    ComponentParentComponent,
+    ComponentChildComponent,
+    DomChildComponent,
+    DomParentComponent
   ],
   imports: [
     BrowserModule,

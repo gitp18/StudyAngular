@@ -1,0 +1,13 @@
+.countrySeg {
+    background-color : orange;
+    color: paleturquoise;
+    padding: 20px;
+    width: 30%;
+}
+
+.deptSeg {
+    background-color : black;
+    color: white;
+    padding: 20px;
+    width: 30%;
+}

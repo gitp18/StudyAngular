@@ -1,0 +1,19 @@
+<!-- <div>
+    <child></child>
+</div> -->
+
+<!-- <div>
+    <child>
+        <h2 class="deptName">{{departmentList[0]}}</h2>
+        <p>Dept Descriptionsdfssssssssss</p>
+        <button class="knowMore">Know More About {{departmentList[0]}}</button>
+    </child>
+</div> -->
+
+<div *ngFor="let dept of departmentList">
+    <child>
+        <h5 class="deptName">{{dept}}</h5>
+        <p>Dept Description</p>
+        <button class="knowMore">Know More About {{dept}}</button>
+    </child><br>
+</div>
