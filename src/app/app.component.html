@@ -1,6 +1,6 @@
 <router-outlet>
 
-    <h1 class="text-primary text-center">Directives</h1>
+    <h1 class="text-primary text-center">Structural Directives</h1>
     <div class="row">
         <div class="col-md-4">
             <h3 class="text-light bg-dark text-center">*ngIf</h3>
@@ -64,14 +64,36 @@
                         </ul>
                         -->
         </div>
-    </div>
+    </div><br>
 
-    <h1 class="text-primary text-center">Custom Directives</h1>
+    <h1 class="text-primary text-center">Attribute Directives</h1>
     <div class="row">
-        <div class="col-md-12">
-            <app-custom-directive></app-custom-directive>
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">ngClass</h3>
+            <app-ng-class></app-ng-class>
         </div>
-    </div>
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">ngStyle</h3>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-light bg-dark text-center">ngNonBindable</h3>
+            <app-ng-non-bindable></app-ng-non-bindable>
+        </div>
+    </div><br>
+
+
+    <h1 class="text-primary text-center">Attribute Directives</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="text-light bg-dark text-center">Custom Attribute Directive</h3>
+            <app-attribute></app-attribute>
+        </div>
+        <div class="col-md-6">
+            <h3 class="text-light bg-dark text-center">Custom Structural Directive</h3>
+            <app-structural></app-structural>
+        </div>
+    </div><br>
+
 
 
     <h1 class="text-primary text-center">Forms</h1>

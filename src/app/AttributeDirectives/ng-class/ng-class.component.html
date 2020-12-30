@@ -1,0 +1,4 @@
+<p [ngClass]="'one two three'">With String</p>
+<p [ngClass]="{'one': true, 'two': true, 'three': true}">With Object</p>
+<p [ngClass]="['one', 'two', 'three']">With Array</p>
+<p [ngClass]="getClassCss('mode')">With Component Method</p>
