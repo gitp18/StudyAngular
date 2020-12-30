@@ -1,6 +1,9 @@
-<!-- <div>
-    <child></child>
-</div> -->
+<div *ngFor="let dept of departmentList">
+    <child>
+        <h5 class="deptName">{{dept}}</h5>
+        <button class="knowMore">Know More About {{dept}}</button>
+    </child>
+</div>
 
 <!-- <div>
     <child>
@@ -10,10 +13,10 @@
     </child>
 </div> -->
 
-<div *ngFor="let dept of departmentList">
+<!-- <div *ngFor="let dept of departmentList">
     <child>
         <h5 class="deptName">{{dept}}</h5>
         <p>Dept Description</p>
         <button class="knowMore">Know More About {{dept}}</button>
     </child><br>
-</div>
+</div> -->

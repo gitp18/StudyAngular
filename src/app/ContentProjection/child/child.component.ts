@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'child',
   template: `<div class="deptSeg">
-                <ng-content select=".deptName"></ng-content>
-                <p>Department Description</p>
-                <ng-content select=".knowMore"></ng-content>
-              </div>`,
+              <ng-content select=".deptName"></ng-content>
+              <p>Department Description.</p>
+              <ng-content select=".knowMore"></ng-content>
+            </div><br>`,
   styles: [`
             .deptSeg {
               background-color : black;

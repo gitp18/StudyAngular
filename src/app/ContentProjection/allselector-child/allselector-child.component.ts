@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'all-selector-child',
   template: `<div class="countrySeg">
-              <h3>India</h3>
-              <p>India description</p>
-              <h4>New Delhi</h4>
-              <h5>Asia</h5>
+              <ng-content select=".countryName"></ng-content>
+              <ng-content select="[id=descId]"></ng-content>
+              <ng-content select="[capital]"></ng-content>
+              <ng-content select="[capital]"></ng-content>
             </div>`,
   styles: [`
             .countrySeg {

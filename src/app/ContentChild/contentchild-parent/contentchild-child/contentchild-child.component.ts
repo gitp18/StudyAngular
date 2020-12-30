@@ -7,9 +7,9 @@ import { Component, ContentChild, ElementRef } from '@angular/core';
 })
 
 export class ContentchildChildComponent {
-  @ContentChild('helloDiv', {static: true}) div: ElementRef;
+  @ContentChild('helloDiv', {static: true}) divRefVal: ElementRef;
   
   clickButton(){
-      alert(this.div.nativeElement.innerHTML);
+      alert(this.divRefVal.nativeElement.innerHTML);
   }
 }

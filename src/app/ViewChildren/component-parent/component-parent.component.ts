@@ -9,10 +9,12 @@ import { ComponentChildComponent } from './component-child/component-child.compo
 export class ComponentParentComponent {
   @ViewChildren(ComponentChildComponent) child: QueryList<ElementRef>
   
+  valFromChild = '';
   buttonClick() {
     this.child.forEach(item => {
+      this.valFromChild += 'abc' ;
       console.log(item);
-      alert(item.title);
+     // alert(it);
     });
   }
 
