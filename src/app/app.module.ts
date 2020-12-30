@@ -48,6 +48,10 @@ import { ComponentParentComponent } from './ViewChildren/component-parent/compon
 import { ComponentChildComponent } from './ViewChildren/component-parent/component-child/component-child.component';
 import { DomChildComponent } from './ViewChildren/dom-parent/dom-child/dom-child.component';
 import { DomParentComponent } from './ViewChildren/dom-parent/dom-parent.component';
+import { HostBindingComponent } from './HostBinding/host-binder.component';
+import { HostListenerComponentComponent } from './HostListener/host-listener-component/host-listener-component.component';
+import { HostListenerDirectiveComponent } from './HostListener/host-listener-directive/host-listener-directive.component';
+import { RenderHighlightDirective } from './Directives/render-highlight.directive';
 
 
 
@@ -97,7 +101,11 @@ import { DomParentComponent } from './ViewChildren/dom-parent/dom-parent.compone
     ComponentParentComponent,
     ComponentChildComponent,
     DomChildComponent,
-    DomParentComponent
+    DomParentComponent,
+    HostBindingComponent,
+    HostListenerComponentComponent,
+    HostListenerDirectiveComponent,
+    RenderHighlightDirective
   ],
   imports: [
     BrowserModule,
