@@ -1,0 +1,118 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card redial-border-light redial-shadow mb-4">
+            <div class="card-body">
+                <form class="userformsec" #MySignUpForm="ngForm" (ngSubmit)="onSubmit(MySignUpForm)">
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                            <div class="form-group" [class.has-error]="fname.invalid && fname.touched" [class.has-success]="fname.valid">
+                                <label class="d-block" for="full_name" class="control-label">Full Name</label>
+                                <input type="text" class="form-control" autocomplete="off" placeholder="" 
+                                    name="full_name" [(ngModel)]="full_name" #fname="ngModel" 
+                                    required />
+                                <span class="help-block" *ngIf="fname.invalid && fname.touched">Full name is required!</span>
+                            </div>
+
+                            <div class="form-group" [class.has-error]="cemailC.invalid && cemailC.touched" [class.has-success]="cemailC.valid">
+                                <label class="d-block" for="cemail" class="control-label">Company Email</label>
+                                <input type="text" class="form-control" autocomplete="off" placeholder="" 
+                                    name="cemail" [(ngModel)]="cemail" #cemailC="ngModel"
+                                    required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
+                                <span class="help-block" *ngIf="cemailC.invalid && cemailC.touched">Comapny email is required!</span>
+                                <span class="help-block" *ngIf="cemailC.errors?.pattern && cemailC.touched">Comapny email is not valid!</span>
+                            </div>
+
+                            <div class="form-group" [class.has-error]="pemailC.invalid && pemailC.touched" [class.has-success]="pemailC.valid">
+                                <label class="d-block" for="pemail" class="control-label">Personal Email</label>
+                                <input type="text" class="form-control" autocomplete="off" placeholder="" 
+                                    name="pemail" [(ngModel)]="pemail" #pemailC="ngModel"
+                                    required [email]="email != 'asad'" />
+                                <span class="help-block" *ngIf="pemailC.errors?.required && pemailC.touched">Comapny email is required!</span>
+                                <span class="help-block" *ngIf="pemailC.errors?.email && pemailC.touched">Comapny email is not valid!</span>
+                            </div>
+
+                            <div class="form-group" [class.has-error]="genderC.invalid">
+                                <label class="d-block" for="gender" class="control-label">Gender</label>
+                                <div>
+                                    <label class="radio-inline">
+                                        <input type="radio" value="male" 
+                                            name="gender" [(ngModel)]="gender" required #genderC="ngModel" 
+                                            required >Male
+                                    </label>&nbsp;&nbsp;
+                                    <label class="radio-inline">
+                                        <input type="radio" value="female" 
+                                            name="gender" [(ngModel)]="gender" required #genderC="ngModel" 
+                                            required >Female
+                                    </label>
+                                    <span class="help-block" *ngIf="genderC.errors?.required">Gender is required!</span>
+                                </div>
+                            </div>
+                            <div class="form-group" [class.has-error]="departmentC.invalid && departmentC.invalid">
+                                <label class="d-block" for="department" class="control-label">Department</label>
+                                <select class="fancy-select form-control form-control-sm"
+                                        name="department" [(ngModel)]="department" #departmentC="ngModel" 
+                                        required >
+                                    <option disabled [ngValue]="null">Select Status</option>  
+                                    <option [ngValue]="k.name" *ngFor="let k of departments">{{k.name}}</option>  
+                                </select>
+                                <span class="help-block" *ngIf="departmentC.touched && departmentC.invalid">Department is required!</span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-md-6">                            
+                            <div class="form-group" [class.has-error]="isActiveC.invalid && isActiveC.touched">
+                                <div>
+                                    <label class="d-block" for="isActive" class="control-label">Is Active</label>
+                                    <input type="checkbox" class="form-control" 
+                                        name="isActive" [(ngModel)]="isActive" #isActiveC="ngModel" required />
+                                </div>
+                                <span class="help-block" *ngIf="isActiveC.errors?.required && isActiveC.touched">IsActive is required!</span>
+                            </div>
+                            
+                
+                            <div class="form-group">
+                                <div class="col-md col-sm-3">
+                                    <div class="form-group">
+                                        <label class="d-block">Start Date</label>
+                                        <input type="text" class="form-control form-control-sm" autocomplete="off" 
+                                            name="startDate" placeholder="" [(ngModel)]="startDate" 
+                                            bsDatepicker [bsConfig]= "datePickerConfig" />
+                                    </div>
+                                </div>
+                                <div class="col-md col-sm-3">
+                                    <div class="form-group">
+                                        <label class="d-block">End Date</label>
+                                        <input type="text" class="form-control form-control-sm"  autocomplete="off"
+                                            name="endDate" placeholder="" [(ngModel)]="endDate" 
+                                            bsDatepicker [bsConfig]= "datePickerConfig" />
+                                    </div>
+                                </div>   
+                            </div>
+
+                            <!-- <div class="form-group">
+                                <div>
+                                    <label class="d-block" for="resume" class="control-label">Upload Resume</label>
+                                    <input type="file" class="form-control" 
+                                        name="resume" [(ngModel)]="resume" #resumeC="ngModel" required />
+                                </div>
+                                <span class="help-block" *ngIf="resumeC.errors?.required && resumeC.touched">Resume upload is required!</span>
+                            </div> -->
+                        </div>
+
+                        <br>{{MySignUpForm.value | json}}<br>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="redial-divider my-4"></div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xs" type="submit" [disabled]="MySignUpForm.invalid">Submit</button>&nbsp;&nbsp;
+                        <button class="btn btn-success btn-xs" type="button" (click)="onEditData()">Edit</button>
+                    </div>
+                </form>
+                    
+            </div>
+        </div>
+
+    </div>
+</div>

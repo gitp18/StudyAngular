@@ -1,0 +1,134 @@
+<!-- main-content-->
+<div class="wrapper">
+	<div id="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card redial-border-light redial-shadow mb-4">
+					<div class="card-body">
+						<div class="row">
+						<div class="col-sm-6"><h6 class="header-title pl-3 redial-relative float-left"> Employee Data List </h6></div>
+						<div class="col-sm-6">
+							<a href="javascript:void(0);" class="btn pagingtableissuebtn columnbtn float-right">Column &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+							<a href="javascript:void(0);" class="btn pagingtableissuebtn btndownload float-right" (click)="exportAsXLSX()">Download</a>
+						</div>
+							<div class="clearfix"></div>
+							<div class="tdlist_show_checkboxtab" style="display:none;">
+								<div class="closetdlist_show_checkbox headingcheck"> <input type="checkbox" id="ckbCheckAll" [(ngModel)]="checkAllbtn" (click)="checkAll($event)">
+									<label for="ckbCheckAll" class="mb-0 colorwhite">Column</label>
+									<span class="closecheckboxitem float-right"><i class="fa fa-times-circle colorwhite" aria-hidden="true"></i></span>
+								</div>
+								<div class="scrollbar scrollbarcheck light">     
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth1" id="misentry-tdth1" [(ngModel)]="misentrytdth1">
+										<label for="misentry-tdth1" class="mb-0">Name</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth2" id="misentry-tdth2" [(ngModel)]="misentrytdth2">
+										<label for="misentry-tdth2" class="mb-0">LoginId</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth3" id="misentry-tdth3" [(ngModel)]="misentrytdth3">
+										<label for="misentry-tdth3" class="mb-0">UsedID</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth4" id="misentry-tdth4" [(ngModel)]="misentrytdth4">
+										<label for="misentry-tdth4" class="mb-0">EmailId</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth5" id="misentry-tdth5" [(ngModel)]="misentrytdth5">
+										<label for="misentry-tdth5" class="mb-0">Contact</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth6" id="misentry-tdth6" [(ngModel)]="misentrytdth6">
+										<label for="misentry-tdth6" class="mb-0">Balance</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth7" id="misentry-tdth7" [(ngModel)]="misentrytdth7">
+										<label for="misentry-tdth7" class="mb-0">Education</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth8" id="misentry-tdth8" [(ngModel)]="misentrytdth8">
+										<label for="misentry-tdth8" class="mb-0">CGPA</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth9" id="misentry-tdth9" [(ngModel)]="misentrytdth9">
+										<label for="misentry-tdth9" class="mb-0">Years of Exp</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth10" id="misentry-tdth10" [(ngModel)]="misentrytdth10">
+										<label for="misentry-tdth10" class="mb-0">Gender</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth11" id="misentry-tdth11" [(ngModel)]="misentrytdth11">
+										<label for="misentry-tdth11" class="mb-0">Company</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth12" id="misentry-tdth12" [(ngModel)]="misentrytdth12">
+										<label for="misentry-tdth12" class="mb-0">City</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth13" id="misentry-tdth13" [(ngModel)]="misentrytdth13">
+										<label for="misentry-tdth13" class="mb-0">State</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth14" id="misentry-tdth14" [(ngModel)]="misentrytdth14">
+										<label for="misentry-tdth14" class="mb-0">Country</label>
+									  </div>
+									  <div class="clecklist">
+										<input type="checkbox" name="misentry-tdth15" id="misentry-tdth15" [(ngModel)]="misentrytdth15">
+										<label for="misentry-tdth15" class="mb-0">Age</label>
+									  </div>
+								</div>
+							</div>
+						</div>
+						<div class="table-responsive">
+							<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="tablecheckid table table-sm mb-0 redial-font-weight-500 table-responsive d-md-table table-bordered">
+								<thead class="table-dark">
+									<tr class="redial-bg-primary">
+										<th scope="col" [ngClass]="{colactive: misentrytdth1 == true, colinactive: misentrytdth1 == false}">Name</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth2 == true, colinactive: misentrytdth2 == false}">User ID</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth3 == true, colinactive: misentrytdth3 == false}">Login ID</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth4 == true, colinactive: misentrytdth4 == false}">Email ID</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth5 == true, colinactive: misentrytdth5 == false}">Contact</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth6 == true, colinactive: misentrytdth6 == false}">Balance</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth7 == true, colinactive: misentrytdth7 == false}">Education</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth8 == true, colinactive: misentrytdth8 == false}">CGPA</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth9 == true, colinactive: misentrytdth9 == false}">Years of Exp</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth10 == true, colinactive: misentrytdth10 == false}">Gender</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth11 == true, colinactive: misentrytdth11 == false}">Company</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth12 == true, colinactive: misentrytdth12 == false}">City</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth13 == true, colinactive: misentrytdth13 == false}">State</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth14 == true, colinactive: misentrytdth14 == false}">Country</th>
+										<th scope="col" [ngClass]="{colactive: misentrytdth15 == true, colinactive: misentrytdth15 == false}">Age</th>
+									</tr>
+								</thead>
+								<tbody *ngIf="listData?.length != 0">
+									<tr *ngFor="let list of listData">
+										<td [ngClass]="{colactive: misentrytdth1 == true, colinactive: misentrytdth1 == false}">{{ list.fname }}&nbsp;{{list.lname}}</td>
+										<td [ngClass]="{colactive: misentrytdth2 == true, colinactive: misentrytdth2 == false}">{{ list.userid }}</td>
+										<td [ngClass]="{colactive: misentrytdth3 == true, colinactive: misentrytdth3 == false}">{{ list.loginid }}</td>
+										<td [ngClass]="{colactive: misentrytdth4 == true, colinactive: misentrytdth4 == false}">{{ list.emailid }}</td>
+										<td [ngClass]="{colactive: misentrytdth5 == true, colinactive: misentrytdth5 == false}">{{ list.phone }}</td>
+										<td [ngClass]="{colactive: misentrytdth6 == true, colinactive: misentrytdth6 == false}">{{ list.balance}}</td>
+										<td [ngClass]="{colactive: misentrytdth7 == true, colinactive: misentrytdth7 == false}">{{ list.stream }}</td>
+										<td [ngClass]="{colactive: misentrytdth8 == true, colinactive: misentrytdth8 == false}">{{ list.cgpa }}</td>
+										<td [ngClass]="{colactive: misentrytdth9 == true, colinactive: misentrytdth9 == false}">{{ list.yearsOfExp }}</td>
+										<td [ngClass]="{colactive: misentrytdth10 == true, colinactive: misentrytdth10 == false}">{{ list.gender }}</td>
+										<td [ngClass]="{colactive: misentrytdth11 == true, colinactive: misentrytdth11 == false}">{{ list.company }}</td>
+										<td [ngClass]="{colactive: misentrytdth12 == true, colinactive: misentrytdth12 == false}">{{ list.city }}</td>
+										<td [ngClass]="{colactive: misentrytdth13 == true, colinactive: misentrytdth13 == false}">{{ list.state }}</td>
+										<td [ngClass]="{colactive: misentrytdth14 == true, colinactive: misentrytdth14 == false}">{{ list.country }}</td>
+										<td [ngClass]="{colactive: misentrytdth15 == true, colinactive: misentrytdth15 == false}">{{ list.age }}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<!-- End main-content-->
+                      

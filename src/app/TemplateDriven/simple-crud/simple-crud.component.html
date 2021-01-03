@@ -1,0 +1,17 @@
+<h6>Create Author</h6>
+<form #authorForm="ngForm" (ngSubmit)="createAuthor(authorForm)">
+  <input type="text" name="name" [(ngModel)]="name" placeholder="Name" />
+  <input type="hidden" name="id" [(ngModel)]="id" />
+  <button type="submit">Submit</button>
+</form>
+<hr />
+
+
+<ul *ngFor="let data of authorList">
+  <li>
+    <label>{{ data.name }}</label>&nbsp;&nbsp;&nbsp;
+    <a href="javascript:void(0);" (click)="editAuthor(data.id)">Edit</a>&nbsp;&nbsp;&nbsp;||
+    <a href="javascript:void(0);" (click)="deleteAuthor(data.id)">Delete</a>
+  </li>
+</ul>
+{{ authorMsg }}

@@ -1,4 +1,8 @@
 export class Employee{
-  name: string;
-  email?: string;
+  full_name: string;
+  cemail: string;
+  pemail: string;
+  gender: string;
+  department: string;
+  isActive: boolean
 }
