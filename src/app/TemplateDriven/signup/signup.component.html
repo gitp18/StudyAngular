@@ -27,7 +27,7 @@
                                 <label class="d-block" for="pemail" class="control-label">Personal Email</label>
                                 <input type="text" class="form-control" autocomplete="off" placeholder="" 
                                     name="pemail" [(ngModel)]="pemail" #pemailC="ngModel"
-                                    required [email]="email != 'asad'" />
+                                    required [email]="email != ''" />
                                 <span class="help-block" *ngIf="pemailC.errors?.required && pemailC.touched">Comapny email is required!</span>
                                 <span class="help-block" *ngIf="pemailC.errors?.email && pemailC.touched">Comapny email is not valid!</span>
                             </div>
